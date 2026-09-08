@@ -1,6 +1,8 @@
 import { tileSize } from "../base/constants/constant";
 
 export const setCamera = (_x, _y, _z) => {
+  const scene = document.getElementById("scene");
+  const viewport = document.getElementById("viewport");
   scene.style.transformOrigin = `0% 0%`;
   const xPos = -tileSize * _x + -tileSize / 2;
   const yPos = -tileSize * (_y - 1 - _z * 0.25) + -tileSize;

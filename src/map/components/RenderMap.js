@@ -28,7 +28,9 @@ const RenderRandom = (_movingCubes) => {
   return _movingCubes;
 };
 const DrawAndSaveCube = (_movingCubes, _x, _y, _z, _token, _speed) => {
-  map.insertAdjacentHTML("beforeEnd", drawCube(_x, _y, _z, _token));
+  document
+    .getElementById("map")
+    .insertAdjacentHTML("beforeEnd", drawCube(_x, _y, _z, _token));
   _movingCubes.cube.push({
     id: `x${_x}y${_y}z${_z}`,
     pos: {
